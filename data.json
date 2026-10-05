@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-05T19:54+00:00",
+  "as_of": "2026-10-05T21:02+00:00",
   "kit": "defs-d39b234a95"
  },
  "machines": [
@@ -162,10 +162,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-05T19:49:43+00:00",
+   "at": "2026-10-05T19:55:31+00:00",
    "passed": 37,
    "failed": 0,
-   "seconds": 230,
+   "seconds": 200,
    "fails": []
   },
   "residency": {
@@ -187,7 +187,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-05T19:53:07+00:00",
+  "residency_checked_at": "2026-10-05T21:01:22+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -206,45 +206,45 @@
    },
    {
     "day": "2026-10-05",
-    "n": 285
+    "n": 292
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 149
+    "n": 151
    },
    {
     "category": "private",
-    "n": 79
+    "n": 80
    },
    {
     "category": "code",
-    "n": 59
+    "n": 60
    },
    {
     "category": "research",
-    "n": 56
+    "n": 57
    },
    {
     "category": "writing",
-    "n": 55
+    "n": 56
    },
    {
     "category": "other",
-    "n": 55
+    "n": 56
    },
    {
     "category": "vision",
     "n": 6
    }
   ],
-  "total": 455,
-  "median_ms": 20094,
-  "local_share": 75,
-  "memories": 453,
+  "total": 462,
+  "median_ms": 20109,
+  "local_share": 76,
+  "memories": 455,
   "proposals_decided": 52,
-  "learn_runs": 1414
+  "learn_runs": 1489
  },
  "ladder": [
   {
