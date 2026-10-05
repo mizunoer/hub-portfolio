@@ -1,0 +1,567 @@
+{
+ "about": {
+  "title": "A home AI fleet that runs itself",
+  "owner": "Dallin",
+  "as_of": "2026-10-05T15:51+00:00",
+  "kit": "defs-d39b234a95"
+ },
+ "machines": [
+  {
+   "id": "msi-ai1",
+   "name": "msi-ai1",
+   "role": "Control point (always on)",
+   "status": "live",
+   "os": "Ubuntu Server 26.04.1",
+   "cpu": "Intel Core Ultra 7 265",
+   "ram_gb": 24,
+   "gpu": "RTX 5070 Ti 16 GB",
+   "disk": "1 TB NVMe (root + /srv/models)",
+   "runs": [
+    "hub stack (docker compose)",
+    "Ollama",
+    "lr-serve :8100",
+    "lr-cycle timer (15 min)",
+    "cobalt :9000",
+    "stick re-staging",
+    "model-scout runs"
+   ]
+  },
+  {
+   "id": "msi-ai2",
+   "name": "msi-ai2",
+   "role": "GPU worker",
+   "status": "live",
+   "os": "Ubuntu Server 26.04.1 (installer v4)",
+   "cpu": "Intel Core Ultra 7 265",
+   "ram_gb": 24,
+   "gpu": "RTX 5070 Ti 16 GB",
+   "disk": "1 TB NVMe (root 150G, /srv/models 778G) + 931G spare at /data",
+   "runs": [
+    "Ollama 0.35.1 on GPU (models in /srv/models/ollama)",
+    "msi-lights off at boot"
+   ]
+  },
+  {
+   "id": "omen",
+   "name": "Omen (DJ-LT-Omen01)",
+   "role": "Dallin's workstation (roams)",
+   "status": "live",
+   "os": "Windows 11 Home",
+   "cpu": "Intel Core Ultra 9 285H",
+   "ram_gb": 32,
+   "gpu": "RTX 5070 Laptop",
+   "runs": [
+    "Cursor",
+    "Claude Code",
+    "Spark mail bridge (7:00, 12:00, 17:00 Mountain)",
+    "fleet SSH key"
+   ]
+  },
+  {
+   "id": "envy",
+   "name": "HP Envy (ENVY-AI)",
+   "role": "Services host (later)",
+   "status": "planned",
+   "os": "Windows 11 Pro",
+   "cpu": "Intel Core i7-10750H",
+   "ram_gb": 32,
+   "gpu": "GTX 1660 Ti Max-Q 6 GB",
+   "disk": "1 TB NVMe"
+  },
+  {
+   "id": "t30",
+   "name": "Dell T30",
+   "role": "Storage (TrueNAS planned)",
+   "status": "planned"
+  },
+  {
+   "id": "generic-pc",
+   "name": "Generic PC",
+   "role": "Spare",
+   "status": "planned"
+  }
+ ],
+ "services": [
+  {
+   "name": "postgres",
+   "what": "Postgres with pgvector: requests, memories, measurements, proposals"
+  },
+  {
+   "name": "litellm",
+   "what": "LiteLLM: one gateway in front of every model group"
+  },
+  {
+   "name": "signin",
+   "what": "sign-in browser for media accounts (a real browser the hub keeps)"
+  },
+  {
+   "name": "hub-core",
+   "what": "hub-core: the hub's own service (route, remember, review, every page)"
+  },
+  {
+   "name": "open-webui",
+   "what": "Open WebUI: the chat surface, pointed at the hub"
+  }
+ ],
+ "models": {
+  "local": [
+   {
+    "group": "classifier",
+    "model": "tev1:4b",
+    "on": "msi-ai1"
+   },
+   {
+    "group": "local-general",
+    "model": "qwen3.5:9b",
+    "on": "msi-ai1"
+   },
+   {
+    "group": "local-code",
+    "model": "qwen3.5:9b",
+    "on": "msi-ai1"
+   },
+   {
+    "group": "local-research",
+    "model": "qwen3.5:9b",
+    "on": "msi-ai1"
+   },
+   {
+    "group": "local-general-ai2",
+    "model": "gemma4:12b",
+    "on": "msi-ai2"
+   },
+   {
+    "group": "local-code-ai2",
+    "model": "qwen3.5:9b",
+    "on": "msi-ai2"
+   },
+   {
+    "group": "local-research-ai2",
+    "model": "gemma4:12b",
+    "on": "msi-ai2"
+   }
+  ],
+  "free_providers": [
+   "gemini",
+   "groq",
+   "mistral",
+   "ollama",
+   "openrouter",
+   "sambanova",
+   "zai"
+  ],
+  "cloud_groups": [
+   "cloud-strong",
+   "cloud-fast"
+  ],
+  "context_window": 16384
+ },
+ "checks": {
+  "smoke": {
+   "at": "2026-10-05T15:15:22+00:00",
+   "passed": 35,
+   "failed": 0,
+   "seconds": 372,
+   "fails": []
+  },
+  "residency": {
+   "msi-ai1": {
+    "ok": true,
+    "loaded": [
+     {
+      "name": "nomic-embed-text:v1.5",
+      "gpu_pct": 100
+     }
+    ]
+   },
+   "msi-ai2": {
+    "ok": true,
+    "loaded": []
+   }
+  },
+  "residency_checked_at": "2026-10-05T15:50:42+00:00",
+  "smoke_schedule": "daily at 12:20 UTC"
+ },
+ "activity": {
+  "per_day": [
+   {
+    "day": "2026-10-02",
+    "n": 53
+   },
+   {
+    "day": "2026-10-03",
+    "n": 13
+   },
+   {
+    "day": "2026-10-04",
+    "n": 108
+   },
+   {
+    "day": "2026-10-05",
+    "n": 79
+   }
+  ],
+  "by_category": [
+   {
+    "category": "private",
+    "n": 63
+   },
+   {
+    "category": "code",
+    "n": 44
+   },
+   {
+    "category": "quick",
+    "n": 42
+   },
+   {
+    "category": "writing",
+    "n": 37
+   },
+   {
+    "category": "research",
+    "n": 35
+   },
+   {
+    "category": "other",
+    "n": 32
+   }
+  ],
+  "total": 253,
+  "median_ms": 30610,
+  "local_share": 74,
+  "memories": 351,
+  "proposals_decided": 51,
+  "learn_runs": 1292
+ },
+ "ladder": [
+  {
+   "id": "classify",
+   "title": "Label every request",
+   "rung": "autonomous",
+   "replaces": "Deciding by hand which model each question should go to",
+   "human_role": "Nothing day to day; the classifier model switches on its own when model-scout finds a better one",
+   "agent": "hub-core",
+   "tool": "classifier model in Ollama",
+   "steps": 4
+  },
+  {
+   "id": "chat-model",
+   "title": "Pick the local model for each category",
+   "rung": "assisted",
+   "replaces": "Reading benchmarks and swapping model tags by hand",
+   "human_role": "Approve or reject each switch on /review (option C)",
+   "agent": "model-scout",
+   "tool": "box tests + rankings",
+   "steps": 4
+  },
+  {
+   "id": "offload",
+   "title": "Send work to free external models",
+   "rung": "human-led",
+   "replaces": "Paying for every answer, or keeping every answer on one GPU",
+   "human_role": "Approve each category before any request leaves the box; private requests never do",
+   "agent": "learning router: route",
+   "tool": "LiteLLM free-<provider> groups",
+   "steps": 4
+  },
+  {
+   "id": "memory",
+   "title": "Remember and recall",
+   "rung": "autonomous",
+   "replaces": "Repeating context in every chat",
+   "human_role": "Correct, mark private or delete anything on /memories",
+   "agent": "hub-core + Mem0",
+   "tool": "pgvector, local extraction model",
+   "steps": 4
+  },
+  {
+   "id": "documents",
+   "title": "Turn documents into markdown",
+   "rung": "autonomous",
+   "replaces": "Copying text out of PDFs, Word and slides by hand",
+   "human_role": "Nothing; scanned PDFs are flagged because OCR never leaves the box",
+   "agent": "hub-core docs",
+   "tool": "MarkItDown, Anydoc fallback",
+   "steps": 3
+  },
+  {
+   "id": "mail-triage",
+   "title": "Triage mail",
+   "rung": "autonomous",
+   "replaces": "Reading every message to find what needs a reply",
+   "human_role": "Read the brief on /inbox",
+   "agent": "hub-core comms",
+   "tool": "Spark CLI, local model",
+   "steps": 3
+  },
+  {
+   "id": "mail-drafts",
+   "title": "Draft mail replies",
+   "rung": "human-led",
+   "replaces": "Writing routine replies from scratch",
+   "human_role": "Approve each draft; the hub never sends mail",
+   "agent": "hub-core comms",
+   "tool": "local model, Spark drafts",
+   "steps": 3
+  },
+  {
+   "id": "rate",
+   "title": "Rate external models",
+   "rung": "autonomous",
+   "replaces": "Trusting leaderboards",
+   "human_role": "None; nothing real is sent, only synthetic test prompts",
+   "agent": "learning router: rate + judge",
+   "tool": "68-case suite, two free judges",
+   "steps": 4
+  },
+  {
+   "id": "new-machine",
+   "title": "Set up a new machine",
+   "rung": "assisted",
+   "replaces": "An evening of installs per box",
+   "human_role": "Plug in the stick and pick it at boot (F11 on the MSIs)",
+   "agent": "installer v4.1",
+   "tool": "Ubuntu autoinstall + fleet-finish",
+   "steps": 4
+  }
+ ],
+ "decisions": [
+  {
+   "n": "0001",
+   "title": "The hub runs on LiteLLM, Mem0, Open WebUI, Postgres and one custom service",
+   "status": "decided"
+  },
+  {
+   "n": "0002",
+   "title": "Classifier and embedding switch automatically; chat routes wait for approval",
+   "status": "decided"
+  },
+  {
+   "n": "0003",
+   "title": "Private never leaves the box",
+   "status": "decided"
+  },
+  {
+   "n": "0004",
+   "title": "The Omen is the workstation; msi-ai1 is the control point",
+   "status": "decided"
+  },
+  {
+   "n": "0005",
+   "title": "Documents become text on the box: MarkItDown, Anydoc fallback",
+   "status": "decided"
+  },
+  {
+   "n": "0006",
+   "title": "No Omarchy on any server",
+   "status": "decided"
+  },
+  {
+   "n": "0007",
+   "title": "OmniRoute supplies its free-tier catalogue, nothing else",
+   "status": "decided"
+  },
+  {
+   "n": "0008",
+   "title": "Free external judges wait for Dallin's word",
+   "status": "open"
+  },
+  {
+   "n": "0009",
+   "title": "Mail comes through Spark on the Omen; the hub never sends",
+   "status": "decided"
+  },
+  {
+   "n": "0010",
+   "title": "Follow the model-agnostic outline's file discipline, not its path",
+   "status": "decided"
+  },
+  {
+   "n": "0011",
+   "title": "Our own machines over Tailscale are inside the private boundary",
+   "status": "decided by default"
+  },
+  {
+   "n": "0012",
+   "title": "A local, swappable Jev-style decision layer; paid Jev later, never for private requests",
+   "status": "open"
+  },
+  {
+   "n": "0013",
+   "title": "Fixed local groups name measured tags that fit the card; the LiteLLM config stays a file",
+   "status": "decided by default"
+  },
+  {
+   "n": "0014",
+   "title": "Free external models may answer non-private work; keys and paid tiers wait for Dallin",
+   "status": "decided"
+  },
+  {
+   "n": "0015",
+   "title": "Paid tools stay in the routes and are used only when there is a way to pay",
+   "status": "decided"
+  },
+  {
+   "n": "0016",
+   "title": "Connections is the registry of vendors, keys and core components; keys pasted on the page land in ~/hub/.env",
+   "status": "decided by default"
+  },
+  {
+   "n": "0017",
+   "title": "A 30%+ winner with the same cost and speed is chosen automatically; the rest are summaries with choices; resources count (one quality point per 5% less GPU work, amended 2026-10-04)",
+   "status": "decided"
+  },
+  {
+   "n": "0019",
+   "title": "One 16384-token context window for every local model call; Ollama's default silently cut long prompts",
+   "status": "decided"
+  },
+  {
+   "n": "0020",
+   "title": "Every automated call has a ceiling, each layer a little above the one below, and a call that runs out says so by name",
+   "status": "decided"
+  }
+ ],
+ "pages": [
+  {
+   "section": "Use every day",
+   "name": "Chat",
+   "what": "Open WebUI. Pick the model \"hub\" and it routes each request to the best model."
+  },
+  {
+   "section": "Use every day",
+   "name": "Console",
+   "what": "The node map, org chart, task cards and brain. Every node opens to the file behind it."
+  },
+  {
+   "section": "Use every day",
+   "name": "Approvals",
+   "what": "Model switches and offloads waiting on you (option C)."
+  },
+  {
+   "section": "Use every day",
+   "name": "Inbox",
+   "what": "Mail brief, tasks and dates; reply drafts to approve. The hub never sends mail."
+  },
+  {
+   "section": "Use every day",
+   "name": "Memories",
+   "what": "Everything the hub remembers about you. Correct, mark private or delete."
+  },
+  {
+   "section": "Use every day",
+   "name": "Requests",
+   "what": "What the hub did with each request: category, the model it went to, where that runs, time taken, and why."
+  },
+  {
+   "section": "Use every day",
+   "name": "Connections",
+   "what": "Every vendor, API key and account: paste keys, switch accounts on or off, see what serves each core component."
+  },
+  {
+   "section": "Use every day",
+   "name": "Sign in",
+   "what": "Sign in to a media account inside the hub (opened from its card on Connections); the hub keeps the session."
+  },
+  {
+   "section": "Use every day",
+   "name": "Posts",
+   "what": "Drop a post link and a note: the hub reads every slide, finds the models and repos in it, researches each and says Attempt, Maybe or Skip."
+  },
+  {
+   "section": "Use every day",
+   "name": "Alignment",
+   "what": "Pick Cursor, Claude Code, ChatGPT or claude.ai: one PowerShell line exports its agents into the hub, then points the tool at the hub."
+  },
+  {
+   "section": "Check and build",
+   "name": "Health",
+   "what": "Is hub-core up and can it reach its database (JSON)."
+  },
+  {
+   "section": "Check and build",
+   "name": "API reference",
+   "what": "Every hub-core endpoint, generated by FastAPI. Calls need HUB_API_KEY."
+  },
+  {
+   "section": "Check and build",
+   "name": "Cobalt",
+   "what": "Media grabber API (no page). Use grab.sh <url> on msi-ai1."
+  },
+  {
+   "section": "Check and build",
+   "name": "LiteLLM gateway",
+   "what": "Model gateway the hub calls. Only reachable on msi-ai1 itself."
+  },
+  {
+   "section": "Check and build",
+   "name": "Ollama on msi-ai2",
+   "what": "Models on the second MSI (JSON)."
+  },
+  {
+   "section": "Check and build",
+   "name": "Portfolio",
+   "what": "The public, read-only view of the fleet for a r\u00e9sum\u00e9 or a portfolio: machines, models, self-checks, counts; nothing private, no path back into the hub."
+  },
+  {
+   "section": "Check and build",
+   "name": "Hosting",
+   "what": "Public and test sites on Namecheap cPanel, deployed from GitHub within a minute of a push. Nothing private."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Code (nlyz)",
+   "what": "Every definition lives here: CONTEXT.md in each folder says what it holds."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Draft PR #3",
+   "what": "Everything since PR #1 merged on 2026-10-04, waiting for you to merge."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Where things live",
+   "what": "Which file holds what, and how we optimize models without losing the objectives."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Decisions",
+   "what": "One record per decision: what was decided, why, and what it rules out."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Hub design",
+   "what": "How the hub is built and why."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Fleet plan",
+   "what": "What each machine is for."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Income plan",
+   "what": "The audit and retainer offer."
+  },
+  {
+   "section": "Plans and records",
+   "name": "Outline review",
+   "what": "The model-agnostic outline against what we built."
+  }
+ ],
+ "mcp": [
+  {
+   "name": "model-scout",
+   "what": "Ask the model and repo recommendation engine: rankings, box tests, add a candidate."
+  },
+  {
+   "name": "agent-bundle",
+   "what": "Export, import and read reports on agents and chats from Cursor, Claude and ChatGPT."
+  },
+  {
+   "name": "markitdown-local",
+   "what": "Convert any document to markdown on this machine (the shared markitdown entry runs it)."
+  }
+ ]
+}
