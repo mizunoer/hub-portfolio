@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-05T15:51+00:00",
+  "as_of": "2026-10-05T17:14+00:00",
   "kit": "defs-d39b234a95"
  },
  "machines": [
@@ -158,16 +158,20 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-05T15:15:22+00:00",
+   "at": "2026-10-05T17:11:25+00:00",
    "passed": 35,
    "failed": 0,
-   "seconds": 372,
+   "seconds": 201,
    "fails": []
   },
   "residency": {
    "msi-ai1": {
     "ok": true,
     "loaded": [
+     {
+      "name": "qwen3.5:9b",
+      "gpu_pct": 100
+     },
      {
       "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
@@ -179,7 +183,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-05T15:50:42+00:00",
+  "residency_checked_at": "2026-10-05T17:13:20+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -198,41 +202,41 @@
    },
    {
     "day": "2026-10-05",
-    "n": 79
+    "n": 102
    }
   ],
   "by_category": [
    {
     "category": "private",
-    "n": 63
+    "n": 67
    },
    {
     "category": "code",
-    "n": 44
+    "n": 48
    },
    {
     "category": "quick",
-    "n": 42
+    "n": 46
    },
    {
     "category": "writing",
-    "n": 37
+    "n": 40
    },
    {
     "category": "research",
-    "n": 35
+    "n": 38
    },
    {
     "category": "other",
-    "n": 32
+    "n": 37
    }
   ],
-  "total": 253,
-  "median_ms": 30610,
-  "local_share": 74,
-  "memories": 351,
+  "total": 276,
+  "median_ms": 29885,
+  "local_share": 73,
+  "memories": 365,
   "proposals_decided": 51,
-  "learn_runs": 1292
+  "learn_runs": 1297
  },
  "ladder": [
   {
@@ -432,47 +436,47 @@
   {
    "section": "Use every day",
    "name": "Console",
-   "what": "The node map, org chart, task cards and brain. Every node opens to the file behind it."
+   "what": "See every machine, model, agent and memory and how they connect."
   },
   {
    "section": "Use every day",
-   "name": "Approvals",
-   "what": "Model switches and offloads waiting on you (option C)."
+   "name": "Needs you",
+   "what": "Every choice and step only you can do, in one list."
   },
   {
    "section": "Use every day",
    "name": "Inbox",
-   "what": "Mail brief, tasks and dates; reply drafts to approve. The hub never sends mail."
+   "what": "Mail brief and reply drafts; the hub never sends mail."
   },
   {
    "section": "Use every day",
    "name": "Memories",
-   "what": "Everything the hub remembers about you. Correct, mark private or delete."
+   "what": "What the hub remembers about you."
   },
   {
    "section": "Use every day",
    "name": "Requests",
-   "what": "What the hub did with each request: category, the model it went to, where that runs, time taken, and why."
+   "what": "What the hub did with each request and why."
   },
   {
    "section": "Use every day",
    "name": "Connections",
-   "what": "Every vendor, API key and account: paste keys, switch accounts on or off, see what serves each core component."
+   "what": "Keys, accounts and services, and which are switched on."
   },
   {
    "section": "Use every day",
    "name": "Sign in",
-   "what": "Sign in to a media account inside the hub (opened from its card on Connections); the hub keeps the session."
+   "what": "Reached from a Connections card only; the hub keeps the session."
   },
   {
    "section": "Use every day",
    "name": "Posts",
-   "what": "Drop a post link and a note: the hub reads every slide, finds the models and repos in it, researches each and says Attempt, Maybe or Skip."
+   "what": "Drop a post link; the hub says what in it is worth trying."
   },
   {
    "section": "Use every day",
-   "name": "Alignment",
-   "what": "Pick Cursor, Claude Code, ChatGPT or claude.ai: one PowerShell line exports its agents into the hub, then points the tool at the hub."
+   "name": "Agents",
+   "what": "Bring your Cursor, Claude Code and ChatGPT agents into the hub."
   },
   {
    "section": "Check and build",
@@ -502,12 +506,12 @@
   {
    "section": "Check and build",
    "name": "Portfolio",
-   "what": "The public, read-only view of the fleet for a r\u00e9sum\u00e9 or a portfolio: machines, models, self-checks, counts; nothing private, no path back into the hub."
+   "what": "A public, read-only view of the fleet for job applications; nothing private, no path back in."
   },
   {
    "section": "Check and build",
    "name": "Hosting",
-   "what": "Public and test sites on Namecheap cPanel, deployed from GitHub within a minute of a push. Nothing private."
+   "what": "Your Namecheap sites and their deploys."
   },
   {
    "section": "Plans and records",
