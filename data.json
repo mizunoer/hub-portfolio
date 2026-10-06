@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-06T20:34+00:00",
+  "as_of": "2026-10-06T21:22+00:00",
   "kit": "defs-d39b234a95"
  },
  "machines": [
@@ -158,14 +158,17 @@
    "cloud-strong",
    "cloud-fast"
   ],
-  "context_window": 65536
+  "context_window": {
+   "msi-ai1": 16384,
+   "msi-ai2": 65536
+  }
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-06T20:29:19+00:00",
+   "at": "2026-10-06T20:36:21+00:00",
    "passed": 42,
    "failed": 0,
-   "seconds": 249,
+   "seconds": 235,
    "fails": []
   },
   "residency": {
@@ -173,26 +176,21 @@
     "ok": true,
     "loaded": [
      {
-      "name": "nomic-embed-text:v1.5",
+      "name": "qwen3.5:9b",
       "gpu_pct": 100
      },
      {
-      "name": "qwen3.5:9b",
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      }
     ]
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": [
-     {
-      "name": "gemma4:12b",
-      "gpu_pct": 100
-     }
-    ]
+    "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-06T20:33:16+00:00",
+  "residency_checked_at": "2026-10-06T21:21:45+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -215,21 +213,21 @@
    },
    {
     "day": "2026-10-06",
-    "n": 118
+    "n": 126
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 193
+    "n": 195
    },
    {
     "category": "private",
-    "n": 92
+    "n": 94
    },
    {
     "category": "other",
-    "n": 75
+    "n": 76
    },
    {
     "category": "code",
@@ -237,27 +235,27 @@
    },
    {
     "category": "research",
-    "n": 71
+    "n": 72
    },
    {
     "category": "writing",
-    "n": 71
+    "n": 72
+   },
+   {
+    "category": "long_doc",
+    "n": 7
    },
    {
     "category": "vision",
     "n": 6
-   },
-   {
-    "category": "long_doc",
-    "n": 6
    }
   ],
-  "total": 584,
-  "median_ms": 18989,
+  "total": 592,
+  "median_ms": 19207,
   "local_share": 70,
-  "memories": 545,
+  "memories": 548,
   "proposals_decided": 53,
-  "learn_runs": 2780
+  "learn_runs": 2782
  },
  "ladder": [
   {
