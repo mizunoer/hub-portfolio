@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-06T18:20+00:00",
+  "as_of": "2026-10-06T20:04+00:00",
   "kit": "defs-d39b234a95"
  },
  "machines": [
@@ -20,7 +20,7 @@
     "hub stack (docker compose)",
     "Ollama",
     "lr-serve :8100",
-    "lr-cycle timer (15 min)",
+    "lr-cycle timer (1 min)",
     "cobalt :9000",
     "stick re-staging",
     "model-scout runs"
@@ -136,7 +136,7 @@
    },
    {
     "group": "local-code-ai2",
-    "model": "qwen3.5:9b",
+    "model": "gemma4:12b",
     "on": "msi-ai2"
    },
    {
@@ -158,14 +158,14 @@
    "cloud-strong",
    "cloud-fast"
   ],
-  "context_window": 16384
+  "context_window": 65536
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-06T18:17:45+00:00",
-   "passed": 38,
+   "at": "2026-10-06T20:01:41+00:00",
+   "passed": 41,
    "failed": 0,
-   "seconds": 243,
+   "seconds": 213,
    "fails": []
   },
   "residency": {
@@ -173,11 +173,11 @@
     "ok": true,
     "loaded": [
      {
-      "name": "qwen3.5:9b",
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      },
      {
-      "name": "nomic-embed-text:v1.5",
+      "name": "qwen3.5:9b",
       "gpu_pct": 100
      }
     ]
@@ -186,13 +186,13 @@
     "ok": true,
     "loaded": [
      {
-      "name": "hf.co/Piotr1215/Winnow-12B-GGUF:Q4_K_M",
+      "name": "gemma4:12b",
       "gpu_pct": 100
      }
     ]
    }
   },
-  "residency_checked_at": "2026-10-06T18:19:23+00:00",
+  "residency_checked_at": "2026-10-06T20:03:53+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -215,45 +215,49 @@
    },
    {
     "day": "2026-10-06",
-    "n": 40
+    "n": 87
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 165
+    "n": 181
    },
    {
     "category": "private",
-    "n": 84
+    "n": 90
    },
    {
     "category": "code",
-    "n": 66
+    "n": 71
    },
    {
     "category": "other",
-    "n": 65
+    "n": 71
    },
    {
     "category": "research",
-    "n": 62
+    "n": 68
    },
    {
     "category": "writing",
-    "n": 62
+    "n": 67
    },
    {
     "category": "vision",
     "n": 6
+   },
+   {
+    "category": "long_doc",
+    "n": 3
    }
   ],
-  "total": 506,
-  "median_ms": 19615,
-  "local_share": 72,
-  "memories": 502,
+  "total": 553,
+  "median_ms": 18807,
+  "local_share": 70,
+  "memories": 524,
   "proposals_decided": 53,
-  "learn_runs": 2661
+  "learn_runs": 2744
  },
  "ladder": [
   {
