@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-06T15:02+00:00",
+  "as_of": "2026-10-06T16:04+00:00",
   "kit": "defs-d39b234a95"
  },
  "machines": [
@@ -162,16 +162,20 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-06T12:25:57+00:00",
+   "at": "2026-10-06T15:54:29+00:00",
    "passed": 38,
    "failed": 0,
-   "seconds": 279,
+   "seconds": 144,
    "fails": []
   },
   "residency": {
    "msi-ai1": {
     "ok": true,
     "loaded": [
+     {
+      "name": "nomic-embed-text:v1.5",
+      "gpu_pct": 100
+     },
      {
       "name": "qwen3.5:9b",
       "gpu_pct": 100
@@ -180,10 +184,15 @@
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "hf.co/Piotr1215/Winnow-12B-GGUF:Q4_K_M",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-06T15:01:24+00:00",
+  "residency_checked_at": "2026-10-06T16:03:03+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -206,13 +215,13 @@
    },
    {
     "day": "2026-10-06",
-    "n": 8
+    "n": 16
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 155
+    "n": 158
    },
    {
     "category": "private",
@@ -220,31 +229,31 @@
    },
    {
     "category": "code",
-    "n": 61
-   },
-   {
-    "category": "research",
-    "n": 58
-   },
-   {
-    "category": "writing",
-    "n": 58
+    "n": 62
    },
    {
     "category": "other",
-    "n": 58
+    "n": 60
+   },
+   {
+    "category": "research",
+    "n": 59
+   },
+   {
+    "category": "writing",
+    "n": 59
    },
    {
     "category": "vision",
     "n": 6
    }
   ],
-  "total": 474,
-  "median_ms": 20073,
-  "local_share": 75,
-  "memories": 482,
+  "total": 482,
+  "median_ms": 19776,
+  "local_share": 74,
+  "memories": 488,
   "proposals_decided": 53,
-  "learn_runs": 2509
+  "learn_runs": 2557
  },
  "ladder": [
   {
