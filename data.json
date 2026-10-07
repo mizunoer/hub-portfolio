@@ -2,8 +2,8 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-07T17:22+00:00",
-  "kit": "defs-d39b234a95"
+  "as_of": "2026-10-07T19:00+00:00",
+  "kit": "defs-2a86f0666e"
  },
  "machines": [
   {
@@ -165,18 +165,20 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-07T12:26:39+00:00",
-   "passed": 41,
-   "failed": 1,
-   "seconds": 381,
-   "fails": [
-    "did not recall the rabbit's name (Nimbus20) in 3 tries"
-   ]
+   "at": "2026-10-07T18:33:27+00:00",
+   "passed": 43,
+   "failed": 0,
+   "seconds": 463,
+   "fails": []
   },
   "residency": {
    "msi-ai1": {
     "ok": true,
     "loaded": [
+     {
+      "name": "nomic-embed-text:v1.5",
+      "gpu_pct": 100
+     },
      {
       "name": "qwen3.5:9b",
       "gpu_pct": 100
@@ -185,10 +187,15 @@
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "gemma4:12b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-07T17:21:47+00:00",
+  "residency_checked_at": "2026-10-07T18:59:16+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -215,13 +222,13 @@
    },
    {
     "day": "2026-10-07",
-    "n": 11
+    "n": 43
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 200
+    "n": 205
    },
    {
     "category": "private",
@@ -229,35 +236,39 @@
    },
    {
     "category": "other",
-    "n": 79
+    "n": 84
    },
    {
     "category": "code",
-    "n": 76
+    "n": 82
    },
    {
     "category": "research",
-    "n": 74
+    "n": 82
    },
    {
     "category": "writing",
-    "n": 74
+    "n": 76
    },
    {
     "category": "long_doc",
-    "n": 9
+    "n": 12
    },
    {
     "category": "vision",
     "n": 6
+   },
+   {
+    "category": "task",
+    "n": 3
    }
   ],
-  "total": 611,
-  "median_ms": 19243,
+  "total": 643,
+  "median_ms": 19595,
   "local_share": 70,
-  "memories": 596,
+  "memories": 671,
   "proposals_decided": 53,
-  "learn_runs": 3339
+  "learn_runs": 3424
  },
  "ladder": [
   {
@@ -445,6 +456,11 @@
   {
    "n": "0020",
    "title": "Every automated call has a ceiling, each layer a little above the one below, and a call that runs out says so by name",
+   "status": "decided"
+  },
+  {
+   "n": "0021",
+   "title": "Chat's housekeeping prompts take a task lane to msi-ai2; an orchestrated chat streams its progress instead of silence",
    "status": "decided"
   }
  ],
