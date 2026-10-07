@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-07T21:59+00:00",
+  "as_of": "2026-10-07T22:59+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -186,7 +186,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-07T21:58:28+00:00",
+  "residency_checked_at": "2026-10-07T22:58:28+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -259,7 +259,7 @@
   "local_share": 73,
   "memories": 423,
   "proposals_decided": 54,
-  "learn_runs": 3525
+  "learn_runs": 3589
  },
  "ladder": [
   {
