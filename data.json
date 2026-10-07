@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-07T20:03+00:00",
+  "as_of": "2026-10-07T20:59+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -165,24 +165,22 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-07T19:39:14+00:00",
-   "passed": 42,
-   "failed": 1,
-   "seconds": 374,
-   "fails": [
-    "did not recall the parrot's name (Marble47) in 3 tries"
-   ]
+   "at": "2026-10-07T20:04:35+00:00",
+   "passed": 44,
+   "failed": 0,
+   "seconds": 144,
+   "fails": []
   },
   "residency": {
    "msi-ai1": {
     "ok": true,
     "loaded": [
      {
-      "name": "nomic-embed-text:v1.5",
+      "name": "qwen3.5:9b",
       "gpu_pct": 100
      },
      {
-      "name": "qwen3.5:9b",
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      }
     ]
@@ -197,7 +195,7 @@
     ]
    }
   },
-  "residency_checked_at": "2026-10-07T20:02:25+00:00",
+  "residency_checked_at": "2026-10-07T20:58:28+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -224,53 +222,53 @@
    },
    {
     "day": "2026-10-07",
-    "n": 90
+    "n": 111
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 221
+    "n": 222
    },
    {
     "category": "private",
-    "n": 98
+    "n": 99
    },
    {
     "category": "research",
-    "n": 88
-   },
-   {
-    "category": "code",
-    "n": 87
+    "n": 92
    },
    {
     "category": "other",
-    "n": 87
+    "n": 89
+   },
+   {
+    "category": "code",
+    "n": 88
    },
    {
     "category": "writing",
-    "n": 79
-   },
-   {
-    "category": "long_doc",
-    "n": 14
+    "n": 80
    },
    {
     "category": "task",
-    "n": 13
+    "n": 22
+   },
+   {
+    "category": "long_doc",
+    "n": 16
    },
    {
     "category": "vision",
     "n": 7
    }
   ],
-  "total": 690,
-  "median_ms": 19099,
-  "local_share": 72,
-  "memories": 701,
+  "total": 711,
+  "median_ms": 18717,
+  "local_share": 73,
+  "memories": 427,
   "proposals_decided": 54,
-  "learn_runs": 3424
+  "learn_runs": 3487
  },
  "ladder": [
   {
