@@ -2,7 +2,7 @@
  "about": {
   "title": "A home AI fleet that runs itself",
   "owner": "Dallin",
-  "as_of": "2026-10-08T04:59+00:00",
+  "as_of": "2026-10-08T05:59+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -174,14 +174,19 @@
   "residency": {
    "msi-ai1": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "qwen3.5:9b",
+      "gpu_pct": 100
+     }
+    ]
    },
    "msi-ai2": {
     "ok": true,
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-08T04:58:29+00:00",
+  "residency_checked_at": "2026-10-08T05:58:29+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -254,7 +259,7 @@
   "local_share": 73,
   "memories": 427,
   "proposals_decided": 54,
-  "learn_runs": 3841
+  "learn_runs": 3932
  },
  "ladder": [
   {
