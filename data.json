@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-08T12:14+00:00",
+  "as_of": "2026-10-08T13:14+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -161,10 +161,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-07T21:02:29+00:00",
+   "at": "2026-10-08T12:26:05+00:00",
    "passed": 44,
    "failed": 0,
-   "seconds": 263,
+   "seconds": 248,
    "fails": []
   },
   "residency": {
@@ -172,11 +172,11 @@
     "ok": true,
     "loaded": [
      {
-      "name": "nomic-embed-text:v1.5",
+      "name": "ornith-1.5:9b",
       "gpu_pct": 100
      },
      {
-      "name": "ornith-1.5:9b",
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      }
     ]
@@ -186,7 +186,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-08T12:13:49+00:00",
+  "residency_checked_at": "2026-10-08T13:13:49+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -214,12 +214,16 @@
    {
     "day": "2026-10-07",
     "n": 117
+   },
+   {
+    "day": "2026-10-08",
+    "n": 10
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 225
+    "n": 229
    },
    {
     "category": "private",
@@ -227,37 +231,37 @@
    },
    {
     "category": "research",
-    "n": 92
+    "n": 93
+   },
+   {
+    "category": "code",
+    "n": 89
    },
    {
     "category": "other",
     "n": 89
    },
    {
-    "category": "code",
-    "n": 88
-   },
-   {
     "category": "writing",
-    "n": 81
+    "n": 82
    },
    {
     "category": "task",
-    "n": 22
+    "n": 23
    },
    {
     "category": "long_doc",
-    "n": 18
+    "n": 20
    },
    {
     "category": "vision",
     "n": 7
    }
   ],
-  "total": 717,
-  "median_ms": 18769,
+  "total": 727,
+  "median_ms": 18807,
   "local_share": 73,
-  "memories": 427,
+  "memories": 426,
   "proposals_decided": 54,
   "learn_runs": 4161
  },
@@ -441,7 +445,7 @@
   },
   {
    "n": "0019",
-   "title": "One 16384-token context window for every local model call; Ollama's default silently cut long prompts",
+   "title": "One context window per machine (16384 tokens on msi-ai1, 65536 on msi-ai2, from hub/fleet.toml); Ollama's default had silently cut long prompts",
    "status": "decided"
   },
   {
