@@ -1,6 +1,6 @@
 {
  "about": {
-  "title": "A home AI fleet that runs itself",
+  "title": "Building AI into real-world work",
   "owner": "Dallin",
   "as_of": "2026-10-08T10:59+00:00",
   "kit": "defs-2a86f0666e"
@@ -91,12 +91,8 @@
    "what": "LiteLLM: one gateway in front of every model group"
   },
   {
-   "name": "signin",
-   "what": "sign-in browser for media accounts (a real browser the hub keeps)"
-  },
-  {
    "name": "decide-serve",
-   "what": ""
+   "what": "decide-serve: the swappable decision layer that picks between model candidates"
   },
   {
    "name": "hub-core",
@@ -473,36 +469,6 @@
   },
   {
    "section": "Use every day",
-   "name": "Needs you",
-   "what": "Every choice and step only you can do, in one list."
-  },
-  {
-   "section": "Use every day",
-   "name": "Inbox",
-   "what": "Mail brief and reply drafts; the hub never sends mail."
-  },
-  {
-   "section": "Use every day",
-   "name": "Memories",
-   "what": "What the hub remembers about you."
-  },
-  {
-   "section": "Use every day",
-   "name": "Requests",
-   "what": "What the hub did with each request and why."
-  },
-  {
-   "section": "Use every day",
-   "name": "Connections",
-   "what": "Keys, accounts and services, and which are switched on."
-  },
-  {
-   "section": "Use every day",
-   "name": "Posts",
-   "what": "Drop a post link; the hub says what in it is worth trying."
-  },
-  {
-   "section": "Use every day",
    "name": "Agents",
    "what": "Bring your Cursor, Claude Code and ChatGPT agents into the hub."
   },
@@ -518,16 +484,6 @@
   },
   {
    "section": "Check and build",
-   "name": "Sign in",
-   "what": "Reached from a Connections card only; the hub keeps the session."
-  },
-  {
-   "section": "Check and build",
-   "name": "Cobalt",
-   "what": "Media grabber API (no page). Use grab.sh <url> on msi-ai1."
-  },
-  {
-   "section": "Check and build",
    "name": "LiteLLM gateway",
    "what": "Model gateway the hub calls. Only reachable on msi-ai1 itself."
   },
@@ -537,24 +493,9 @@
    "what": "Models on the second MSI (JSON)."
   },
   {
-   "section": "Check and build",
-   "name": "Portfolio",
-   "what": "A public, read-only view of the fleet for job applications; nothing private, no path back in."
-  },
-  {
-   "section": "Check and build",
-   "name": "Hosting",
-   "what": "Your Namecheap sites and their deploys."
-  },
-  {
    "section": "Plans and records",
    "name": "Code (nlyz)",
    "what": "Every definition lives here: CONTEXT.md in each folder says what it holds."
-  },
-  {
-   "section": "Plans and records",
-   "name": "Draft PR #3",
-   "what": "Everything since PR #1 merged on 2026-10-04, waiting for you to merge."
   },
   {
    "section": "Plans and records",
@@ -575,11 +516,6 @@
    "section": "Plans and records",
    "name": "Fleet plan",
    "what": "What each machine is for."
-  },
-  {
-   "section": "Plans and records",
-   "name": "Income plan",
-   "what": "The audit and retainer offer."
   },
   {
    "section": "Plans and records",
