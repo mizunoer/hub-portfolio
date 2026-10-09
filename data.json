@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-09T15:09+00:00",
+  "as_of": "2026-10-09T16:09+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -182,7 +182,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-09T15:08:17+00:00",
+  "residency_checked_at": "2026-10-09T16:08:17+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -223,15 +223,15 @@
   "by_category": [
    {
     "category": "quick",
-    "n": 227
+    "n": 226
    },
    {
     "category": "research",
-    "n": 91
+    "n": 90
    },
    {
     "category": "private",
-    "n": 89
+    "n": 87
    },
    {
     "category": "other",
@@ -239,11 +239,11 @@
    },
    {
     "category": "code",
-    "n": 84
+    "n": 83
    },
    {
     "category": "writing",
-    "n": 77
+    "n": 76
    },
    {
     "category": "task",
