@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-10T10:09+00:00",
+  "as_of": "2026-10-10T11:09+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -172,26 +172,21 @@
     "ok": true,
     "loaded": [
      {
-      "name": "qwen3.5:9b",
+      "name": "ornith-1.5:9b",
       "gpu_pct": 100
      },
      {
-      "name": "ornith-1.5:9b",
+      "name": "qwen3.5:9b",
       "gpu_pct": 100
      }
     ]
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": [
-     {
-      "name": "gemma4:12b",
-      "gpu_pct": 100
-     }
-    ]
+    "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-10T10:08:19+00:00",
+  "residency_checked_at": "2026-10-10T11:08:19+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
