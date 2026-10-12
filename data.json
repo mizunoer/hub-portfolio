@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-12T12:09+00:00",
+  "as_of": "2026-10-12T13:09+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -161,10 +161,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-11T12:23:38+00:00",
+   "at": "2026-10-12T12:22:04+00:00",
    "passed": 44,
    "failed": 0,
-   "seconds": 141,
+   "seconds": 81,
    "fails": []
   },
   "residency": {
@@ -182,7 +182,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-12T12:08:25+00:00",
+  "residency_checked_at": "2026-10-12T13:08:25+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -226,6 +226,10 @@
    {
     "day": "2026-10-11",
     "n": 10
+   },
+   {
+    "day": "2026-10-12",
+    "n": 10
    }
   ],
   "by_category": [
@@ -255,23 +259,23 @@
    },
    {
     "category": "task",
-    "n": 36
+    "n": 37
    },
    {
     "category": "long_doc",
-    "n": 28
+    "n": 30
    },
    {
     "category": "vision",
     "n": 7
    }
   ],
-  "total": 787,
-  "median_ms": 16841,
+  "total": 797,
+  "median_ms": 16672,
   "local_share": 74,
-  "memories": 460,
+  "memories": 467,
   "proposals_decided": 54,
-  "learn_runs": 5131
+  "learn_runs": 5148
  },
  "ladder": [
   {
