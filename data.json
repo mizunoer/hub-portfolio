@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-13T18:51+00:00",
+  "as_of": "2026-10-13T19:44+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -183,15 +183,10 @@
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": [
-     {
-      "name": "gemma4:12b",
-      "gpu_pct": 100
-     }
-    ]
+    "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-13T18:50:53+00:00",
+  "residency_checked_at": "2026-10-13T19:43:41+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -242,29 +237,29 @@
    },
    {
     "day": "2026-10-13",
-    "n": 16
+    "n": 25
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 98
-   },
-   {
-    "category": "other",
-    "n": 53
+    "n": 94
    },
    {
     "category": "research",
-    "n": 52
+    "n": 51
+   },
+   {
+    "category": "other",
+    "n": 50
    },
    {
     "category": "task",
-    "n": 44
+    "n": 45
    },
    {
     "category": "code",
-    "n": 38
+    "n": 37
    },
    {
     "category": "long_doc",
@@ -272,21 +267,21 @@
    },
    {
     "category": "writing",
-    "n": 25
+    "n": 24
    },
    {
     "category": "private",
-    "n": 15
+    "n": 12
    },
    {
     "category": "vision",
     "n": 1
    }
   ],
-  "total": 870,
-  "median_ms": 16129,
+  "total": 879,
+  "median_ms": 15538,
   "local_share": 76,
-  "memories": 539,
+  "memories": 541,
   "proposals_decided": 56,
   "learn_runs": 5509
  },
@@ -494,6 +489,11 @@
    "section": "Use every day",
    "name": "Console",
    "what": "See every machine, model, agent and memory and how they connect."
+  },
+  {
+   "section": "Use every day",
+   "name": "Recordings",
+   "what": "New Viaim recordings, the work in each one, and your work queue."
   },
   {
    "section": "Use every day",
