@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-13T16:09+00:00",
+  "as_of": "2026-10-13T17:09+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -179,10 +179,15 @@
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "gemma4:12b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-13T16:08:29+00:00",
+  "residency_checked_at": "2026-10-13T17:08:29+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -233,29 +238,29 @@
    },
    {
     "day": "2026-10-13",
-    "n": 10
+    "n": 16
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 103
+    "n": 102
    },
    {
     "category": "other",
-    "n": 58
+    "n": 56
    },
    {
     "category": "research",
-    "n": 55
-   },
-   {
-    "category": "code",
-    "n": 41
+    "n": 54
    },
    {
     "category": "task",
-    "n": 38
+    "n": 44
+   },
+   {
+    "category": "code",
+    "n": 40
    },
    {
     "category": "long_doc",
@@ -263,20 +268,20 @@
    },
    {
     "category": "writing",
-    "n": 28
+    "n": 27
    },
    {
     "category": "private",
-    "n": 17
+    "n": 16
    },
    {
     "category": "vision",
     "n": 1
    }
   ],
-  "total": 864,
-  "median_ms": 16565,
-  "local_share": 75,
+  "total": 870,
+  "median_ms": 16129,
+  "local_share": 76,
   "memories": 537,
   "proposals_decided": 56,
   "learn_runs": 5509
