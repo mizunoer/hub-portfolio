@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-14T17:44+00:00",
+  "as_of": "2026-10-14T18:44+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -179,10 +179,15 @@
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "gemma4:12b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-14T17:43:43+00:00",
+  "residency_checked_at": "2026-10-14T18:43:43+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -243,31 +248,31 @@
   "by_category": [
    {
     "category": "quick",
-    "n": 74
+    "n": 71
    },
    {
     "category": "task",
-    "n": 47
+    "n": 45
    },
    {
     "category": "research",
-    "n": 43
+    "n": 36
    },
    {
     "category": "other",
-    "n": 39
-   },
-   {
-    "category": "code",
-    "n": 30
+    "n": 36
    },
    {
     "category": "long_doc",
-    "n": 29
+    "n": 27
+   },
+   {
+    "category": "code",
+    "n": 27
    },
    {
     "category": "writing",
-    "n": 17
+    "n": 15
    },
    {
     "category": "private",
@@ -283,7 +288,7 @@
   "local_share": 76,
   "memories": 542,
   "proposals_decided": 56,
-  "learn_runs": 5618
+  "learn_runs": 5619
  },
  "ladder": [
   {
