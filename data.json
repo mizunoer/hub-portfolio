@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-14T06:44+00:00",
+  "as_of": "2026-10-14T07:44+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -181,13 +181,13 @@
     "ok": true,
     "loaded": [
      {
-      "name": "gemma4:12b",
+      "name": "hf.co/Piotr1215/Winnow-12B-GGUF:Q4_K_M",
       "gpu_pct": 100
      }
     ]
    }
   },
-  "residency_checked_at": "2026-10-14T06:43:42+00:00",
+  "residency_checked_at": "2026-10-14T07:43:42+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -284,7 +284,7 @@
   "local_share": 76,
   "memories": 537,
   "proposals_decided": 56,
-  "learn_runs": 5591
+  "learn_runs": 5597
  },
  "ladder": [
   {
