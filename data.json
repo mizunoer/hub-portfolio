@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-15T21:14+00:00",
+  "as_of": "2026-10-15T22:04+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -206,15 +206,10 @@
    },
    "envy-ai": {
     "ok": true,
-    "loaded": [
-     {
-      "name": "qwen3.5:4b",
-      "gpu_pct": 100
-     }
-    ]
+    "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-15T21:13:26+00:00",
+  "residency_checked_at": "2026-10-15T22:03:59+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -505,6 +500,11 @@
    "n": "0021",
    "title": "Chat's housekeeping prompts take a task lane to msi-ai2; an orchestrated chat streams its progress instead of silence",
    "status": "decided"
+  },
+  {
+   "n": "0022",
+   "title": "A person signs in by who they are (tailnet login, hub.nlyz.io Access login) and never holds the hub key; organizations get scoped keys, in three phases",
+   "status": "decided"
   }
  ],
  "pages": [
@@ -517,6 +517,16 @@
    "section": "Use every day",
    "name": "Console",
    "what": "See every machine, model, agent and memory and how they connect."
+  },
+  {
+   "section": "Use every day",
+   "name": "My page",
+   "what": "Who you are to the hub, your own key, the devices signed in, forget this browser."
+  },
+  {
+   "section": "Check and build",
+   "name": "Admin",
+   "what": "Organizations, people and which pages each may open; service keys under their organization. Owner only."
   },
   {
    "section": "Use every day",
