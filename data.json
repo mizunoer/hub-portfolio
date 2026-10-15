@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-15T20:11+00:00",
+  "as_of": "2026-10-15T21:14+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -58,15 +58,18 @@
    ]
   },
   {
-   "id": "envy",
-   "name": "HP Envy (ENVY-AI)",
-   "role": "Services host (later)",
-   "status": "planned",
-   "os": "Windows 11 Pro",
+   "id": "envy-ai",
+   "name": "HP Envy (envy-ai)",
+   "role": "Small, fast work (optional: a laptop on Wi-Fi, may sleep)",
+   "status": "live",
+   "os": "Windows 11",
    "cpu": "Intel Core i7-10750H",
    "ram_gb": 32,
-   "gpu": "GTX 1660 Ti Max-Q 6 GB",
-   "disk": "1 TB NVMe"
+   "gpu": "GTX 1660 Ti 6 GB",
+   "disk": "1 TB NVMe",
+   "runs": [
+    "Ollama 0.34.0 (startup task; firewall admits the tailnet only)"
+   ]
   },
   {
    "id": "t30",
@@ -139,6 +142,16 @@
     "group": "local-research-ai2",
     "model": "gemma4:12b",
     "on": "msi-ai2"
+   },
+   {
+    "group": "local-general-envy",
+    "model": "qwen3.5:4b",
+    "on": "envy-ai"
+   },
+   {
+    "group": "local-embed-envy",
+    "model": "nomic-embed-text",
+    "on": "envy-ai"
    }
   ],
   "free_providers": [
@@ -156,25 +169,28 @@
   ],
   "context_window": {
    "msi-ai1": 16384,
-   "msi-ai2": 65536
+   "msi-ai2": 65536,
+   "envy-ai": 8192
   }
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-15T19:58:26+00:00",
-   "passed": 45,
-   "failed": 1,
-   "seconds": 110,
-   "fails": [
-    "the press did not reach the box (state/questions/smoke-question.answer.json)"
-   ]
+   "at": "2026-10-15T21:14:05+00:00",
+   "passed": 47,
+   "failed": 0,
+   "seconds": 65,
+   "fails": []
   },
   "residency": {
    "msi-ai1": {
     "ok": true,
     "loaded": [
      {
-      "name": "qwen3.5:9b",
+      "name": "nomic-embed-text:v1.5",
+      "gpu_pct": 100
+     },
+     {
+      "name": "ornith-1.5:9b",
       "gpu_pct": 100
      }
     ]
@@ -187,9 +203,18 @@
       "gpu_pct": 100
      }
     ]
+   },
+   "envy-ai": {
+    "ok": true,
+    "loaded": [
+     {
+      "name": "qwen3.5:4b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-15T20:10:06+00:00",
+  "residency_checked_at": "2026-10-15T21:13:26+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -248,45 +273,45 @@
    },
    {
     "day": "2026-10-15",
-    "n": 44
+    "n": 80
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 60
-   },
-   {
-    "category": "task",
-    "n": 28
+    "n": 69
    },
    {
     "category": "other",
-    "n": 28
-   },
-   {
-    "category": "research",
-    "n": 26
+    "n": 34
    },
    {
     "category": "long_doc",
-    "n": 25
+    "n": 33
+   },
+   {
+    "category": "task",
+    "n": 31
+   },
+   {
+    "category": "research",
+    "n": 29
    },
    {
     "category": "code",
-    "n": 22
+    "n": 25
    },
    {
     "category": "writing",
-    "n": 12
+    "n": 16
    }
   ],
-  "total": 944,
+  "total": 980,
   "median_ms": 14339,
-  "local_share": 75,
-  "memories": 551,
-  "proposals_decided": 56,
-  "learn_runs": 5908
+  "local_share": 74,
+  "memories": 544,
+  "proposals_decided": 58,
+  "learn_runs": 5944
  },
  "ladder": [
   {
