@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-21T11:35+00:00",
+  "as_of": "2026-10-21T12:35+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -175,12 +175,12 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-20T12:23:42+00:00",
+   "at": "2026-10-21T12:23:44+00:00",
    "passed": 53,
    "failed": 1,
-   "seconds": 112,
+   "seconds": 183,
    "fails": [
-    "split to CPU: nomic-embed-text:v1.5 (hub-core unloads it within 5 minutes; by hand: ollama stop <model>, then one request reloads it on the GPU)"
+    "split to CPU: ornith-1.5:9b\nnomic-embed-text:v1.5 (hub-core unloads it within 5 minutes; by hand: ollama stop <model>, then one request reloads it on the GPU)"
    ]
   },
   "residency": {
@@ -188,8 +188,12 @@
     "ok": true,
     "loaded": [
      {
-      "name": "qwen3.5:9b",
-      "gpu_pct": 88
+      "name": "ornith-1.5:9b",
+      "gpu_pct": 81
+     },
+     {
+      "name": "nomic-embed-text:v1.5",
+      "gpu_pct": 26
      }
     ]
    },
@@ -204,17 +208,22 @@
    },
    "envy-ai": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "qwen3.5:4b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-21T11:31:22+00:00",
+  "residency_checked_at": "2026-10-21T12:31:23+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
   "per_day": [
    {
     "day": "2026-10-07",
-    "n": 117
+    "n": 106
    },
    {
     "day": "2026-10-08",
@@ -267,12 +276,16 @@
    {
     "day": "2026-10-20",
     "n": 10
+   },
+   {
+    "day": "2026-10-21",
+    "n": 10
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 42
+    "n": 40
    },
    {
     "category": "long_doc",
@@ -280,7 +293,7 @@
    },
    {
     "category": "other",
-    "n": 22
+    "n": 24
    },
    {
     "category": "code",
@@ -299,9 +312,9 @@
     "n": 16
    }
   ],
-  "total": 1050,
-  "median_ms": 13435,
-  "local_share": 73,
+  "total": 1060,
+  "median_ms": 13378,
+  "local_share": 72,
   "memories": 1,
   "proposals_decided": 58,
   "learn_runs": 6385
