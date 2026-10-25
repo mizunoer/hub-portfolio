@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-25T04:22+00:00",
+  "as_of": "2026-10-25T05:22+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -188,14 +188,19 @@
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "gemma4:12b",
+      "gpu_pct": 100
+     }
+    ]
    },
    "envy-ai": {
     "ok": true,
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-25T04:21:47+00:00",
+  "residency_checked_at": "2026-10-25T05:21:48+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -255,15 +260,19 @@
    {
     "day": "2026-10-24",
     "n": 42
+   },
+   {
+    "day": "2026-10-25",
+    "n": 6
    }
   ],
   "by_category": [
    {
-    "category": "other",
-    "n": 23
+    "category": "task",
+    "n": 26
    },
    {
-    "category": "task",
+    "category": "other",
     "n": 23
    },
    {
@@ -287,18 +296,18 @@
     "n": 8
    },
    {
-    "category": "private",
-    "n": 5
+    "category": "vision",
+    "n": 7
    },
    {
-    "category": "vision",
-    "n": 4
+    "category": "private",
+    "n": 5
    }
   ],
-  "total": 1130,
+  "total": 1136,
   "median_ms": 11817,
-  "local_share": 72,
-  "memories": 538,
+  "local_share": 73,
+  "memories": 552,
   "proposals_decided": 58,
   "learn_runs": 6385
  },
