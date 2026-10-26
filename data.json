@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-26T19:22+00:00",
+  "as_of": "2026-10-26T20:22+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -213,14 +213,14 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-26T19:17:31+00:00",
+  "residency_checked_at": "2026-10-26T20:17:31+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
   "per_day": [
    {
     "day": "2026-10-12",
-    "n": 54
+    "n": 35
    },
    {
     "day": "2026-10-13",
@@ -276,13 +276,21 @@
    },
    {
     "day": "2026-10-26",
-    "n": 106
+    "n": 242
    }
   ],
   "by_category": [
    {
+    "category": "code",
+    "n": 118
+   },
+   {
     "category": "private",
     "n": 71
+   },
+   {
+    "category": "long_doc",
+    "n": 57
    },
    {
     "category": "other",
@@ -297,14 +305,6 @@
     "n": 25
    },
    {
-    "category": "long_doc",
-    "n": 21
-   },
-   {
-    "category": "code",
-    "n": 18
-   },
-   {
     "category": "research",
     "n": 9
    },
@@ -317,10 +317,10 @@
     "n": 7
    }
   ],
-  "total": 1252,
-  "median_ms": 13968,
-  "local_share": 74,
-  "memories": 581,
+  "total": 1388,
+  "median_ms": 15612,
+  "local_share": 77,
+  "memories": 586,
   "proposals_decided": 58,
   "learn_runs": 6385
  },
