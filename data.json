@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-27T11:25+00:00",
+  "as_of": "2026-10-27T12:27+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -175,51 +175,11 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-27T11:21:41+00:00",
-   "passed": 16,
-   "failed": 39,
-   "seconds": 395,
-   "fails": [
-    "hub-core health",
-    "GET /v1/priority answers (the declared priority, or null)",
-    "database connections unknown (/health db: ? ? ?)",
-    "expected quick for 'What is the capital of Utah?'",
-    "task lane: route 'none' (expected task/easy->local-general-ai2)",
-    "expected code for 'Write a Python function that merges two sorted lists, with tests.'",
-    "expected research for 'Compare pgvector and Qdrant for a home lab RAG setup, with trade-offs.'",
-    "expected writing for 'Draft a short friendly email to a client confirming our Tuesday meeting.'",
-    "could not forget the smoke user's memories: ",
-    "no memory of 'Mango77' after 5 minutes",
-    "did not recall the hamster's name (Mango77) in 3 tries",
-    "long prompt lost its first instruction: Ollama is answering with a 2048-token window (num_ctx missing)",
-    "hub-long did not take an msi-ai2 group with the 64k window (route: none; answer: )",
-    "hub-long lost the code a third of the way into a 40k-token prompt (route: none; answer: ERROR Expecting value: line 2 column 1 (char 1))",
-    "residency watch (/v1/residency)",
-    "Needs you page (/review)",
-    "shared page header (static/hub-chrome.js)",
-    "/v1/pages",
-    "proposals API",
-    "proposal-notes API",
-    "smoke result API (/v1/smoke)",
-    "classifier stats API (/v1/classifier)",
-    "hub-private missing from /v1/models",
-    "hub-long missing from /v1/models",
-    "intake: ",
-    "test messages not all triaged within 10 minutes",
-    "expected exactly one draft",
-    "digest",
-    "inbox page",
-    "convert: ",
-    "rtf fallback: ",
-    "loader: ",
-    "session cookie: the keyed call did not set hub_session, or the cookie alone was refused (hub-core/session.py)",
-    "sign-in by identity answered: ",
-    "sign-in by identity not ready: ",
-    "/v1/admin (hub-core/accounts.py): ",
-    "/v1/me (hub-core/accounts.py)",
-    "box question not on Needs you (state/questions, questions.py)",
-    "the press did not reach the box (state/questions/smoke-question.answer.json)"
-   ]
+   "at": "2026-10-27T11:32:01+00:00",
+   "passed": 55,
+   "failed": 0,
+   "seconds": 528,
+   "fails": []
   },
   "residency": {
    "msi-ai1": {
@@ -228,36 +188,30 @@
      {
       "name": "qwen3.5:9b",
       "gpu_pct": 100
+     },
+     {
+      "name": "nomic-embed-text:v1.5",
+      "gpu_pct": 100
      }
     ]
    },
    "msi-ai2": {
-    "ok": true,
-    "loaded": [
-     {
-      "name": "gemma4:12b",
-      "gpu_pct": 100
-     }
-    ]
+    "ok": false,
+    "loaded": []
    },
    "envy-ai": {
     "ok": true,
-    "loaded": [
-     {
-      "name": "qwen3.5:4b",
-      "gpu_pct": 100
-     }
-    ]
+    "loaded": []
    }
   },
-  "residency_checked_at": "2026-10-27T11:24:02+00:00",
+  "residency_checked_at": "2026-10-27T12:26:54+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
   "per_day": [
    {
     "day": "2026-10-13",
-    "n": 36
+    "n": 26
    },
    {
     "day": "2026-10-14",
@@ -313,13 +267,13 @@
    },
    {
     "day": "2026-10-27",
-    "n": 33
+    "n": 41
    }
   ],
   "by_category": [
    {
     "category": "code",
-    "n": 126
+    "n": 125
    },
    {
     "category": "private",
@@ -339,7 +293,7 @@
    },
    {
     "category": "task",
-    "n": 30
+    "n": 29
    },
    {
     "category": "research",
@@ -354,10 +308,10 @@
     "n": 7
    }
   ],
-  "total": 1476,
-  "median_ms": 16180,
+  "total": 1484,
+  "median_ms": 16285,
   "local_share": 77,
-  "memories": 605,
+  "memories": 610,
   "proposals_decided": 58,
   "learn_runs": 6385
  },
