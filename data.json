@@ -1,8 +1,8 @@
 {
  "about": {
-  "title": "Building AI into real-world work",
+  "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-10-27T12:27+00:00",
+  "as_of": "2026-10-27T13:00+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -175,22 +175,31 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-27T11:32:01+00:00",
-   "passed": 55,
-   "failed": 0,
-   "seconds": 528,
-   "fails": []
+   "at": "2026-10-27T12:39:05+00:00",
+   "passed": 51,
+   "failed": 4,
+   "seconds": 706,
+   "fails": [
+    "task lane: route 'none' (expected task/easy->local-general-ai2)",
+    "hub-long chat timed out after 120s",
+    "hub-long 40k-token prompt timed out after 120s",
+    "split to CPU: ornith-1.5:9b (hub-core unloads it within 5 minutes; by hand: ollama stop <model>, then one request reloads it on the GPU)"
+   ]
   },
   "residency": {
    "msi-ai1": {
     "ok": true,
     "loaded": [
      {
-      "name": "qwen3.5:9b",
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      },
      {
-      "name": "nomic-embed-text:v1.5",
+      "name": "ornith-1.5:9b",
+      "gpu_pct": 7
+     },
+     {
+      "name": "qwen3.5:9b",
       "gpu_pct": 100
      }
     ]
@@ -201,10 +210,15 @@
    },
    "envy-ai": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "qwen3.5:4b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-27T12:26:54+00:00",
+  "residency_checked_at": "2026-10-27T12:59:12+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -267,13 +281,13 @@
    },
    {
     "day": "2026-10-27",
-    "n": 41
+    "n": 50
    }
   ],
   "by_category": [
    {
     "category": "code",
-    "n": 125
+    "n": 126
    },
    {
     "category": "private",
@@ -281,11 +295,11 @@
    },
    {
     "category": "long_doc",
-    "n": 80
+    "n": 82
    },
    {
     "category": "other",
-    "n": 38
+    "n": 41
    },
    {
     "category": "quick",
@@ -293,27 +307,27 @@
    },
    {
     "category": "task",
-    "n": 29
+    "n": 30
    },
    {
     "category": "research",
-    "n": 14
+    "n": 15
    },
    {
     "category": "writing",
-    "n": 12
+    "n": 13
    },
    {
     "category": "vision",
     "n": 7
    }
   ],
-  "total": 1484,
-  "median_ms": 16285,
+  "total": 1491,
+  "median_ms": 16283,
   "local_share": 77,
-  "memories": 610,
+  "memories": 605,
   "proposals_decided": 58,
-  "learn_runs": 6385
+  "learn_runs": 6562
  },
  "ladder": [
   {
