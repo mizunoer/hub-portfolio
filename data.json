@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-10-27T16:00+00:00",
+  "as_of": "2026-10-27T17:00+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -202,17 +202,22 @@
    },
    "envy-ai": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "qwen3.5:4b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-10-27T15:57:11+00:00",
+  "residency_checked_at": "2026-10-27T16:58:12+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
   "per_day": [
    {
     "day": "2026-10-13",
-    "n": 26
+    "n": 20
    },
    {
     "day": "2026-10-14",
@@ -314,7 +319,7 @@
   "local_share": 77,
   "memories": 605,
   "proposals_decided": 58,
-  "learn_runs": 6874
+  "learn_runs": 6930
  },
  "ladder": [
   {
