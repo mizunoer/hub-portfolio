@@ -2,7 +2,7 @@
  "about": {
   "title": "Building AI into real-world work",
   "owner": "Dallin",
-  "as_of": "2026-10-27T01:05+00:00",
+  "as_of": "2026-10-27T01:16+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -175,10 +175,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-10-27T01:04:55+00:00",
+   "at": "2026-10-27T01:16:32+00:00",
    "passed": 55,
    "failed": 0,
-   "seconds": 105,
+   "seconds": 102,
    "fails": []
   },
   "residency": {
@@ -186,11 +186,11 @@
     "ok": true,
     "loaded": [
      {
-      "name": "nomic-embed-text:v1.5",
+      "name": "ornith-1.5:9b",
       "gpu_pct": 100
      },
      {
-      "name": "ornith-1.5:9b",
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      }
     ]
@@ -214,7 +214,7 @@
     ]
    }
   },
-  "residency_checked_at": "2026-10-27T01:04:08+00:00",
+  "residency_checked_at": "2026-10-27T01:15:48+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -277,13 +277,13 @@
    },
    {
     "day": "2026-10-27",
-    "n": 20
+    "n": 30
    }
   ],
   "by_category": [
    {
     "category": "code",
-    "n": 124
+    "n": 125
    },
    {
     "category": "private",
@@ -291,35 +291,35 @@
    },
    {
     "category": "long_doc",
-    "n": 78
+    "n": 80
    },
    {
     "category": "other",
-    "n": 37
-   },
-   {
-    "category": "task",
-    "n": 28
+    "n": 38
    },
    {
     "category": "quick",
-    "n": 28
+    "n": 31
+   },
+   {
+    "category": "task",
+    "n": 29
    },
    {
     "category": "research",
-    "n": 13
+    "n": 14
    },
    {
     "category": "writing",
-    "n": 11
+    "n": 12
    },
    {
     "category": "vision",
     "n": 7
    }
   ],
-  "total": 1463,
-  "median_ms": 16287,
+  "total": 1473,
+  "median_ms": 16167,
   "local_share": 77,
   "memories": 605,
   "proposals_decided": 58,
