@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-11-01T11:42+00:00",
+  "as_of": "2026-11-01T12:42+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -205,15 +205,11 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-11-01T11:37:49+00:00",
+  "residency_checked_at": "2026-11-01T12:37:50+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
   "per_day": [
-   {
-    "day": "2026-10-18",
-    "n": 10
-   },
    {
     "day": "2026-10-19",
     "n": 10
@@ -254,7 +250,7 @@
   "by_category": [
    {
     "category": "code",
-    "n": 121
+    "n": 120
    },
    {
     "category": "private",
@@ -262,7 +258,7 @@
    },
    {
     "category": "long_doc",
-    "n": 70
+    "n": 68
    },
    {
     "category": "other",
@@ -270,19 +266,19 @@
    },
    {
     "category": "quick",
-    "n": 20
+    "n": 16
    },
    {
     "category": "research",
-    "n": 9
+    "n": 8
    },
    {
     "category": "task",
-    "n": 7
+    "n": 6
    },
    {
     "category": "writing",
-    "n": 7
+    "n": 6
    }
   ],
   "total": 1466,
