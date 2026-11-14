@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-11-14T01:06+00:00",
+  "as_of": "2026-11-14T02:06+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -69,6 +69,34 @@
    "disk": "1 TB NVMe",
    "runs": [
     "Ollama 0.34.0 (startup task; firewall admits the tailnet only)"
+   ]
+  },
+  {
+   "id": "mac-ai1",
+   "name": "mac-ai1",
+   "role": "Office worker: OCR + scraping (Mac Studio)",
+   "status": "live",
+   "os": "macOS 27.0",
+   "runs": [
+    "Ollama 0.40.16 (Metal) :11434",
+    "OCR node ocr-mac-ai1 :8150 (gemma4:12b stand-in)",
+    "scrape node :8160 (4 slots)",
+    "box (Claude Remote Control)",
+    "selfheal (launchd, 1 min)"
+   ]
+  },
+  {
+   "id": "mac-ai2",
+   "name": "mac-ai2",
+   "role": "Office worker: OCR + scraping (Mac Studio)",
+   "status": "live",
+   "os": "macOS 27.0",
+   "runs": [
+    "Ollama 0.40.16 (Metal) :11434",
+    "OCR node ocr-mac-ai2 :8150 (gemma4:12b stand-in)",
+    "scrape node :8160 (4 slots)",
+    "box (Claude Remote Control)",
+    "selfheal (launchd, 1 min)"
    ]
   },
   {
@@ -205,7 +233,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-11-14T01:02:07+00:00",
+  "residency_checked_at": "2026-11-14T02:02:09+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
