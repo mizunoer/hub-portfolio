@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-11-22T20:29+00:00",
+  "as_of": "2026-11-22T21:29+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -13,7 +13,7 @@
    "status": "live",
    "os": "Ubuntu Server 26.04.1",
    "cpu": "Intel Core Ultra 7 265",
-   "ram_gb": 24,
+   "ram_gb": 64,
    "gpu": "RTX 5070 Ti 16 GB",
    "disk": "1 TB NVMe (root + /srv/models)",
    "runs": [
@@ -33,7 +33,7 @@
    "status": "live",
    "os": "Ubuntu Server 26.04.1 (installer v4)",
    "cpu": "Intel Core Ultra 7 265",
-   "ram_gb": 24,
+   "ram_gb": 48,
    "gpu": "RTX 5070 Ti 16 GB",
    "disk": "1 TB NVMe (root 150G, /srv/models 778G) + 931G spare at /data",
    "runs": [
@@ -216,23 +216,24 @@
      {
       "name": "ornith-1.5:9b",
       "gpu_pct": 100
-     },
-     {
-      "name": "nomic-embed-text:v1.5",
-      "gpu_pct": 100
      }
     ]
    },
    "msi-ai2": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "gemma4:12b",
+      "gpu_pct": 100
+     }
+    ]
    },
    "envy-ai": {
     "ok": true,
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-11-22T20:28:03+00:00",
+  "residency_checked_at": "2026-11-22T21:28:04+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
