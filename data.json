@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-11-23T11:29+00:00",
+  "as_of": "2026-11-23T12:29+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -203,10 +203,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-11-22T12:28:11+00:00",
+   "at": "2026-11-23T12:22:34+00:00",
    "passed": 55,
    "failed": 0,
-   "seconds": 456,
+   "seconds": 101,
    "fails": []
   },
   "residency": {
@@ -215,6 +215,10 @@
     "loaded": [
      {
       "name": "ornith-1.5:9b",
+      "gpu_pct": 100
+     },
+     {
+      "name": "nomic-embed-text:v1.5",
       "gpu_pct": 100
      }
     ]
@@ -230,10 +234,15 @@
    },
    "envy-ai": {
     "ok": true,
-    "loaded": []
+    "loaded": [
+     {
+      "name": "qwen3.5:4b",
+      "gpu_pct": 100
+     }
+    ]
    }
   },
-  "residency_checked_at": "2026-11-23T11:28:21+00:00",
+  "residency_checked_at": "2026-11-23T12:28:22+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -257,40 +266,44 @@
    {
     "day": "2026-11-22",
     "n": 10
+   },
+   {
+    "day": "2026-11-23",
+    "n": 10
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 11
+    "n": 12
    },
    {
     "category": "long_doc",
-    "n": 10
+    "n": 12
    },
    {
     "category": "other",
-    "n": 9
+    "n": 12
    },
    {
     "category": "code",
-    "n": 5
+    "n": 6
    },
    {
     "category": "research",
-    "n": 5
+    "n": 6
    },
    {
     "category": "task",
-    "n": 5
+    "n": 6
    },
    {
     "category": "writing",
-    "n": 5
+    "n": 6
    }
   ],
   "total": 421,
-  "median_ms": 19672,
+  "median_ms": 19635,
   "local_share": 90,
   "memories": 1,
   "proposals_decided": 60,
