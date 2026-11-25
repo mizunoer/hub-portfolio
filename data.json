@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-11-25T12:06+00:00",
+  "as_of": "2026-11-25T13:06+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -203,10 +203,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-11-24T12:22:27+00:00",
+   "at": "2026-11-25T12:21:53+00:00",
    "passed": 55,
    "failed": 0,
-   "seconds": 133,
+   "seconds": 96,
    "fails": []
   },
   "residency": {
@@ -215,6 +215,10 @@
     "loaded": [
      {
       "name": "ornith-1.5:9b",
+      "gpu_pct": 100
+     },
+     {
+      "name": "qwen3.5:9b",
       "gpu_pct": 100
      }
     ]
@@ -233,7 +237,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-11-25T12:06:21+00:00",
+  "residency_checked_at": "2026-11-25T13:06:23+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -265,12 +269,16 @@
    {
     "day": "2026-11-24",
     "n": 10
+   },
+   {
+    "day": "2026-11-25",
+    "n": 10
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 16
+    "n": 19
    },
    {
     "category": "long_doc",
@@ -278,7 +286,7 @@
    },
    {
     "category": "other",
-    "n": 12
+    "n": 9
    },
    {
     "category": "code",
@@ -299,8 +307,8 @@
   ],
   "total": 415,
   "median_ms": 19672,
-  "local_share": 91,
-  "memories": 1,
+  "local_share": 92,
+  "memories": 605,
   "proposals_decided": 60,
   "learn_runs": 10464
  },
