@@ -2,7 +2,7 @@
  "about": {
   "title": "AI does the routine work, people handle the exceptions",
   "owner": "Dallin",
-  "as_of": "2026-11-26T12:06+00:00",
+  "as_of": "2026-11-26T13:06+00:00",
   "kit": "defs-2a86f0666e"
  },
  "machines": [
@@ -203,10 +203,10 @@
  },
  "checks": {
   "smoke": {
-   "at": "2026-11-25T12:21:53+00:00",
+   "at": "2026-11-26T12:24:56+00:00",
    "passed": 55,
    "failed": 0,
-   "seconds": 96,
+   "seconds": 194,
    "fails": []
   },
   "residency": {
@@ -233,7 +233,7 @@
     "loaded": []
    }
   },
-  "residency_checked_at": "2026-11-26T12:01:52+00:00",
+  "residency_checked_at": "2026-11-26T13:01:53+00:00",
   "smoke_schedule": "daily at 12:20 UTC"
  },
  "activity": {
@@ -269,12 +269,16 @@
    {
     "day": "2026-11-25",
     "n": 10
+   },
+   {
+    "day": "2026-11-26",
+    "n": 10
    }
   ],
   "by_category": [
    {
     "category": "quick",
-    "n": 19
+    "n": 20
    },
    {
     "category": "long_doc",
@@ -282,7 +286,7 @@
    },
    {
     "category": "other",
-    "n": 9
+    "n": 8
    },
    {
     "category": "code",
@@ -301,9 +305,9 @@
     "n": 7
    }
   ],
-  "total": 88,
-  "median_ms": 8094,
-  "local_share": 84,
+  "total": 90,
+  "median_ms": 6614,
+  "local_share": 90,
   "memories": 605,
   "proposals_decided": 60,
   "learn_runs": 10471
